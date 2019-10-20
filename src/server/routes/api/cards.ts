@@ -4,9 +4,9 @@ import db from '../../db';
 const router = express.Router();
 
 
-router.get('/', async (req: any, res, next) => {
+router.get('/', async (req, res, next) => {
     try {
-        let cards: any = await db.cards.getAll();
+        let cards = await db.cards.getAll();
         res.json(cards);
     } catch (e) {
         console.log(e)
