@@ -9,7 +9,7 @@
 //             headers,
 //             body: JSON.stringify(body)
 //         });
-//         console.log(body);
+//         console.log(result);
 //         if (result.ok) {
 //             return <T>(await result.json());
 //         } else {
