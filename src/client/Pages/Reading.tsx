@@ -25,28 +25,38 @@ class Reading extends React.Component<ReadingProps, ReadingState> {
         }
     }
 
+    async handleShuffle(e: React.MouseEvent<HTMLButtonElement>) {
+        e.preventDefault();
+
+    }
+
+    async handlePullCard(e: React.MouseEvent<HTMLButtonElement>) {
+        const drawCard = Math.floor(Math.random() * (12 - 1) + 1);
+        const pulledCard = <img className="image" src={`images/${drawCard}.jpg`} alt={`tarot_card_${drawCard}`} />;
+
+    }
+
     render() {
+       
         return (
             <main className="container my-5" >
                 <section className="col">
                     <h1 className="text-primary text-center">Your Reading</h1>
-                    <button>Shuffle Cards</button>
-                    <button>Pull a Card</button>
+                    <button onClick={(e: React.MouseEvent<HTMLButtonElement>) => this.handleShuffle(e)} >Shuffle Cards</button>
+                    <button onClick={(e: React.MouseEvent<HTMLButtonElement>) => this.handlePullCard(e)}>Pull a Card</button>
                     <div>
                         {this.state.cards.map(card => (
                             <div key={card.id}>
                                 <h1>{card.name}</h1>
-                                {/* <img src="https://tarotreaderapp.s3.us-east-2.amazonaws.com/KC.jpg" alt="tarot_card" />
-                                    <img src="s3://tarotreaderapp/KC.jpg" alt="tarot_card" /> */}
                             </div>
                         ))}
                     </div>
                     <div>
+                        {/* {pulledCard} */}
                         <Images />
                     </div>
                 </section>
-                {/* <button onClick={handleShuffle} >Shuffle Cards</button> */}
-                {/* <button onClick={handlePull}>Pull a Card</button> */}
+
             </main>
         );
     }

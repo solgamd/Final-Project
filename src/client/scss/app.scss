@@ -3,3 +3,10 @@ $theme-colors: (
 );
 
 @import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+
+.image {
+    height: 500px;
+    justify-content: center;
+    border-color: #0091ea;
+    border: solid 4px;
+}
