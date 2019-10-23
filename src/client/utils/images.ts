@@ -1,18 +1,18 @@
 
-const images = [
-    { id: 1, src:'images/KC.jpg'},
-    { id: 2, src:'images/QC.jpg'},
-    { id: 3, src:'images/PC.jpg'},
-    { id: 4, src:'images/KP.jpg'},
-    { id: 5, src:'images/QP.jpg'},
-    { id: 6, src:'images/PP.jpg'},
-    { id: 7, src:'images/KS.jpg'},
-    { id: 8, src:'images/QS.jpg'},
-    { id: 9, src:'images/PS.jpg'},
-    { id: 10, src:'images/KW.jpg'},
-    { id: 11, src:'images/QW.jpg'},
-    { id: 12, src:'images/PW.jpg'},
+const imageArray = [
+    { id: 1, src:'imageArray/KC.jpg'},
+    { id: 2, src:'imageArray/QC.jpg'},
+    { id: 3, src:'imageArray/PC.jpg'},
+    { id: 4, src:'imageArray/KP.jpg'},
+    { id: 5, src:'imageArray/QP.jpg'},
+    { id: 6, src:'imageArray/PP.jpg'},
+    { id: 7, src:'imageArray/KS.jpg'},
+    { id: 8, src:'imageArray/QS.jpg'},
+    { id: 9, src:'imageArray/PS.jpg'},
+    { id: 10, src:'imageArray/KW.jpg'},
+    { id: 11, src:'imageArray/QW.jpg'},
+    { id: 12, src:'imageArray/PW.jpg'},
 ];
 
 
-export default images;
+export default imageArray;
