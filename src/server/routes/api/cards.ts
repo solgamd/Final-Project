@@ -6,10 +6,9 @@ const router = express.Router();
 
 router.get('/', async (req, res, next) => {
     try {
-        let [cards]: any = await db.cards.getAll();
-        
-        res.json({cards});
+        let cards = await db.cards.getAll();
         console.log(cards);
+        res.json(cards);
     } catch (e) {
         console.log(e)
         res.status(500).json('An error occured!')

@@ -2,14 +2,14 @@ import * as React from 'react';
 
 export interface ImagesProps<> { }
 export interface ImagesState {
-    imageArray: []
+    
 }
 
 class Images extends React.Component<ImagesProps, ImagesState> {
     constructor(props: ImagesProps) {
         super(props);
         this.state = {
-            imageArray: []
+           
         }
     }
 

@@ -1,7 +1,7 @@
 import * as express from 'express';
 import * as path from 'path';
 import * as morgan from 'morgan';
-import routes from './routes/api';
+import routes from './routes';
 
 const app = express();
 

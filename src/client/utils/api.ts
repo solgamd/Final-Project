@@ -9,7 +9,6 @@ export const json = async <T = any>(uri: string, method: string = 'GET', body?: 
             headers,
             body: JSON.stringify(body)
         });
-        console.log(result);
         if (result.ok) {
             return <T>(await result.json());
         } else {
