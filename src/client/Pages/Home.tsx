@@ -10,8 +10,14 @@ const Home: React.SFC<HomeProps> = () => {
     return (
 
         <main className="container my-5">
-            <h1>Welcome to Tarot Reader</h1>
-            <Link to="/reading">Do a Reading</Link>
+            <section>
+                <div className="row">
+                    <h1>Welcome to Tarot Reader</h1>
+                </div>
+                <div className="row">
+                    <Link to="/reading" className="btn btn-secondary">Do a Reading</Link>
+                </div>
+            </section>
         </main>
 
     )

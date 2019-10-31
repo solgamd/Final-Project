@@ -1,12 +1,82 @@
 $theme-colors: (
-    'primary': #0091ea //Covalence Blue!  :D
+    'primary': #AACAA2,
+    'secondary': #8797b2,
+    'warning': #CB3A35,
+    'alert': #F9D51A,
+    'dark': #2D3047,
+    'info': #4B3B47,
+    'success': #38369A
+    // 221D23 raisin black
+    // 2D3047 black
+    // 464655 gray
+    // 38369A royal blue
+    // 6622CC grape
 );
+$font-main: (
+    'Quicksand', sans-serif
+);
+
+$font-other: (
+    'Aladin', cursive
+);
+
 
 @import '../../../node_modules/bootstrap/scss/bootstrap.scss';
 
+body {
+    font-family: $font-main;
+}
+
+.link {
+    font-size: 21px;
+    font-weight: 600;
+    font-family: $font-main
+}
+
+.tarot-title {
+    font-family: $font-other
+}
+
+.row {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    justify-content: center
+}
+
+.col-4 {
+    height: 400px
+}
+
+.card-text {
+    font-family: $font-other
+}
+
+.spinner {
+    height: 30px;
+    width: 100px
+}
+
 .image {
-    height: 500px;
-    justify-content: center;
-    border-color: #0091ea;
-    border: solid 4px;
+   height: 400px;
+   max-height: 400px;
+   width: 235px;
+   max-width: 235px;
+}
+
+.card {
+    height: 400px;
+   max-height: 400px;
+   width: 235px;
+   max-width: 235px;
+   margin: 5px
+}
+
+.card-container {
+    height: 200px;
+    width: 200px;
+    background-color: blue; 
+}
+
+.btn {
+    margin: 5px
 }
