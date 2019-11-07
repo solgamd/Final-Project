@@ -1,17 +1,17 @@
 import * as React from 'react';
 
-export interface ResultKCProps {
+export interface ResultPCProps {
 
 }
 
-const ResultKC: React.SFC<ResultKCProps> = () => {
+const ResultPC: React.SFC<ResultPCProps> = () => {
     return (
         <section className="container justify-content-center">
             <div className="row">
-                <h1>King of Cups</h1>
+                <h1>Page of Cups</h1>
             </div>
             <div className="row">
-                <img src="images/cups.png" className="icon" alt="King of Cups icon"></img>
+                <img src="images/cups.png" className="icon" alt="Page of Cups icon"></img>
             </div>
             <div className="row">
                 <div className="col-sm-6 text-center">
@@ -31,4 +31,4 @@ const ResultKC: React.SFC<ResultKCProps> = () => {
     );
 }
 
-export default ResultKC;
+export default ResultPC;

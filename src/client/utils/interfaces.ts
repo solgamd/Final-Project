@@ -1,7 +1,8 @@
 
 export interface ICard {
     id: number,
-    name: string,
+    cardname: string,
+    cardsuit: string,
     suitid: number,
     source: string
 }

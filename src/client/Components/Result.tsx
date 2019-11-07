@@ -1,17 +1,21 @@
 import * as React from 'react';
+import { ICard } from '../utils/interfaces';
+import { RouteComponentProps } from 'react-router';
 
-export interface ResultKCProps {
-
+export interface ResultProps {
+    card: ICard
 }
 
-const ResultKC: React.SFC<ResultKCProps> = () => {
+const Result: React.SFC<ResultProps> = ({card}) => {
+
+    console.log(card);
     return (
         <section className="container justify-content-center">
             <div className="row">
-                <h1>King of Cups</h1>
+                <h1>Result Page {card.cardname}</h1>
             </div>
             <div className="row">
-                <img src="images/cups.png" className="icon" alt="King of Cups icon"></img>
+                <img src="images/pentacles.png" className="icon" alt="Result icon"></img>
             </div>
             <div className="row">
                 <div className="col-sm-6 text-center">
@@ -31,4 +35,4 @@ const ResultKC: React.SFC<ResultKCProps> = () => {
     );
 }
 
-export default ResultKC;
+export default Result;
