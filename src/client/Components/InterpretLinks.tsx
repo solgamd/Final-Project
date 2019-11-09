@@ -1,25 +1,35 @@
 import * as React from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ICard } from '../utils/interfaces';
+import { json } from '../utils/api';
 
 export interface InterpretLinksProps {
     card: ICard
 }
 
+export interface InterpretLinksState {
+    card: []
+}
 
-const InterpretLinks: React.SFC<InterpretLinksProps> = ({card}) => {
+const InterpretLinks: React.SFC<InterpretLinksProps> = ({ card }) => {
+
+    const [links, setLinks] = useState<ICard[]>([]);
+
+    useEffect(() => {
+        (async () => {
+            try {
+                let links = await json('/api/cards');
+                setLinks(links);
+            } catch (error) {
+                console.log(error);
+            }
+        })
+    })
+
     return (
         <div className="col-md-4 d-flex flex-column">
-            <Link to="/1" className="text-success">{card.cardname} of {card.cardsuit}</Link>
-            <Link to="/ResultQC" className="text-success"></Link>
-            <Link to="/ResultPC" className="text-success">Page of Cups</Link>
-            <Link to="/ResultKP" className="text-success">King of Pentacles</Link>
-            <Link to="/ResultQP" className="text-success">Queen of Pentacles</Link>
-            <Link to="/ResultPP" className="text-success">Page of Pentacles</Link>
-            <Link to="/ResultKS" className="text-success">King of Swords</Link>
-            <Link to="/ResultQS" className="text-success">Queen of Swords</Link>
-            <Link to="/ResultPS" className="text-success">Page of Swords</Link>
-
+            <Link to={`/${card.id}`} className="text-success">{card.cardname} of {card.cardsuit}</Link>
         </div>
     );
 }

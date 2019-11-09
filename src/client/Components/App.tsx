@@ -4,7 +4,6 @@ import Home from '../Pages/Home';
 import Reading from '../Pages/Reading';
 import Template from '../Pages/Template';
 import Result from './Result';
-import ResultKC from './ResultKC';
 
 export interface AppProps { }
 export interface AppState { }
