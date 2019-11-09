@@ -18,7 +18,6 @@ const Template: React.SFC<TemplateProps> = () => {
             try {
                 let cards = await json(`/api/cards`);
                 setCards(cards);
-                console.log(cards)
             } catch (error) {
                 console.log(error);
             }
@@ -31,10 +30,11 @@ const Template: React.SFC<TemplateProps> = () => {
                 <h1>Template</h1>
                 <div>
                     {cards.map(card => (
-                    <Result key={`card-${card.id}`} card={card} />
-                ))}
+                        <div key={`card-${card.id}`}>
+                            <Result card={card} />
+                        </div>
+                    ))}
                 </div>
-                
             </div>
         </section>
     );

@@ -1,21 +1,41 @@
 import * as React from 'react';
 import { ICard } from '../utils/interfaces';
 import { RouteComponentProps } from 'react-router';
+import { string } from 'prop-types';
+import { useState, useEffect } from 'react';
+import { json } from '../utils/api';
 
-export interface ResultProps {
-    card: ICard
+export interface ResultProps extends RouteComponentProps<{id: string}> { 
 }
+const Result: React.SFC<ResultProps> = props => {
 
-const Result: React.SFC<ResultProps> = ({card}) => {
+    const [result, setResult] = useState({
+        id: 0,
+        cardname: string,
+        cardsuit: string,
+        suitid: 0,
+        source: string
+    });
 
-    console.log(card);
+    useEffect(() => {
+        (async () => {
+            try {
+                let result = await json(`/api/cards/${props.match.params.id}`);
+                setResult(result);
+                console.log(result.suitid)
+            } catch (error) {
+                console.log(error);
+            }
+        })()
+    }, [props.match.params.id]);
+
     return (
         <section className="container justify-content-center">
             <div className="row">
-                <h1>Result Page {card.cardname}</h1>
+                <h1>Result Page for {result.id}</h1>
             </div>
             <div className="row">
-                <img src="images/pentacles.png" className="icon" alt="Result icon"></img>
+                <img src={`images/${result.suitid}.png`} className="icon" alt="Result icon"></img>
             </div>
             <div className="row">
                 <div className="col-sm-6 text-center">

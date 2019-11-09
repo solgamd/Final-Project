@@ -6,11 +6,11 @@ import InterpretLinks from '../Components/InterpretLinks';
 import LoadingOverlay from 'react-loading-overlay';
 
 export interface ReadingProps {
-    cards: ICard[]
- }
- 
+    cards: ICard
+}
+
 export interface ReadingState {
-    // cards: ICard[],
+    cards: ICard[],
     pulledCard: number,
     shuffle: boolean
 }
@@ -19,20 +19,20 @@ class Reading extends React.Component<ReadingProps, ReadingState> {
     constructor(props: ReadingProps) {
         super(props);
         this.state = {
-            // cards: [],
+            cards: [],
             pulledCard: 0,
             shuffle: false
         }
     }
 
-    // async componentDidMount() {
-    //     try {
-    //         let cards: any = await json('/api/cards');
-    //         this.setState({ cards });
-    //     } catch (e) {
-    //         console.log(e);
-    //     }
-    // }
+    async componentDidMount() {
+        try {
+            let cards: any = await json('/api/cards');
+            this.setState(cards);
+        } catch (e) {
+            console.log(e);
+        }
+    }
 
     async handleShuffle(e: React.MouseEvent<HTMLButtonElement>) {
         this.setState({ shuffle: true });
@@ -97,8 +97,11 @@ class Reading extends React.Component<ReadingProps, ReadingState> {
                         <h6 className="font-italic">Click on your card.</h6>
                     </div>
                 </div>
-                <div className="row justify-content-center">
-                    <InterpretLinks />
+                <div>
+                    {this.state.cards.map(card => (
+                        <InterpretLinks key={`interpret-${card.id}`} card={card} />
+
+                    ))}
                 </div>
             </main>
         );
