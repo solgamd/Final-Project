@@ -20,18 +20,21 @@ $font-other: (
     'Aladin', cursive
 );
 
-
 @import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+
+.logo {
+    height: 75px;
+    width: 75px
+}
 
 body {
     font-family: $font-main;
     color: $secondary;
-    color: pea
 }
 
 .link {
-    font-size: 21px;
-    font-weight: 600;
+    font-size: 18px;
+    font-weight: 400;
     font-family: $font-main
 }
 
@@ -68,30 +71,53 @@ body {
 }
 
 .icon {
-    height: 50px;
-    width: 50px
+    height: 75px;
+    width: 75px;
+    margin: 5px
 }
 
-.card {
+.card-1 {
     height: 400px;
-   max-height: 400px;
-   width: 235px;
-   max-width: 235px;
-   margin: 5px
+    max-height: 400px;
+    width: 235px;
+    max-width: 235px;
+    margin: 5px
+}
+
+.card-2 {
+    height: 400px;
+    max-height: 400px;
+    width: 300px;
+    max-width: 300px;
+    margin: 5px
 }
 
 .card-container {
     height: 200px;
     width: 200px;
-    background-color: blue; 
+    background-color: $secondary; 
 }
 
 .btn {
     margin: 5px 5px 5px 0px;
     box-shadow: 5px black;
-    font-size: 15px
+    font-size: 16px
 }
 
 .col {
     justify-content: center;
+}
+
+.start-text {
+    font-family: $font-other;
+    // margin: 5px
+}
+
+.inner-outline {
+    outline: 2px solid white;
+    outline-offset: -12px;
+}
+
+hr {
+    border-color: $dark
 }

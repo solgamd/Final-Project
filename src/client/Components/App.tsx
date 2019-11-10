@@ -13,14 +13,14 @@ class App extends React.Component<AppProps, AppState> {
         return (
             <BrowserRouter>
                 <nav className="navbar bg-success">
-                    <Link className="m-2 link" to="/">Home</Link>
+                    <Link className="m-2 link" to="/">About Tarot</Link>
+                    <img src="images/logosmall.png" className="logo justify-content-center" alt="logo" />
                     <Link className="m-2 link" to="/reading">Do a Reading</Link>
                 </nav>
                 <Switch>
                     <Route exact path="/" component={Home} />
                     <Route exact path="/reading" component={Reading} />
                     <Route exact path="/:id" component={Result} />
-
                 </Switch>
             </BrowserRouter>
         )

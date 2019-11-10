@@ -53,33 +53,28 @@ const Reading: React.SFC<ReadingProps> = () => {
 
     return (
         <main className="container">
-            <div className="row justify-content-center">
-                <h3 className="text-dark tarot-title">TAROT READER</h3>
-            </div>
             <div className="row">
-                <div className="col-sm-10 rounded justify-content-between shadow">
+                <div className="col-sm-8 rounded justify-content-between shadow">
                     <div className="row justify-content-around">
                         <div className="col pt-2">
-                            <div className="card mx-auto">
+                            <div className="card card-1 mx-auto inner-outline">
                                 <LoadingOverlay
                                     active={shuffle}
                                     spinner={<div>
                                         <Spinner animation="grow" variant="success"><span className="sr-only">Loading...</span></Spinner>
-                                        <h5 className="text-white">Shuffling...</h5>
+                                        <h5 className="text-white font-weight-bolder">Shuffling...</h5>
                                     </div>}>
                                     {pullCard === 0 ? <img className="image rounded" src={`images/00.jpg`} alt={`tarot_card_0`} /> : <img className="image" src={`images/${pullCard}.jpg`} alt={`tarot_card_${pullCard}`} />}
                                 </LoadingOverlay>
                             </div>
-                            <div className="text-center">
-                                <button className="btn btn-success shadow" onClick={(e: React.MouseEvent<HTMLButtonElement>) => handleShuffle(e)}>Shuffle</button>
-                                <button className="btn btn-success shadow" onClick={(e: React.MouseEvent<HTMLButtonElement>) => handlePullCard(e)}>Pull A Card</button>
+                            <div className="text-center mt-3 justify-content-around">
+                                <button className="btn btn-success shadow mx-2" onClick={(e: React.MouseEvent<HTMLButtonElement>) => handleShuffle(e)}>Shuffle</button>
+                                <button className="btn btn-success shadow mx-2" onClick={(e: React.MouseEvent<HTMLButtonElement>) => handlePullCard(e)}>Pull A Card</button>
                             </div>
                         </div>
                         <div className="col pt-2">
-                            <div className="card mx-auto">
-                                {pullCard == 0 ? <StartPanel /> : <FinishPanel cards={cards} />}
-                            </div>
-                            <div className="text-center">
+                            {pullCard == 0 ? <StartPanel /> : <FinishPanel cards={cards} />}
+                            <div className="text-center mt-3">
                                 <button className="btn btn-warning shadow" onClick={(e: React.MouseEvent<HTMLButtonElement>) => handleNewQuestion(e)}>Ask New Question</button>
                             </div>
                         </div>

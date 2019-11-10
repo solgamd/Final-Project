@@ -12,7 +12,7 @@ const Home: React.SFC<HomeProps> = () => {
         <main className="container my-5">
             <section>
                 <div className="row">
-                    <h1>Welcome to Tarot Reader</h1>
+                    <h1 className="tarot-title">Tarot Reader</h1>
                 </div>
                 <div className="row">
                     <Link to="/reading" className="btn btn-secondary">Do a Reading</Link>
