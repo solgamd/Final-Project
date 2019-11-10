@@ -28,7 +28,7 @@ const InterpretLinks: React.SFC<InterpretLinksProps> = ({ card }) => {
     })
 
     return (
-        <div className="col-md-4 d-flex flex-column">
+        <div className="col m-1">
             <Link to={`/${card.id}`} className="text-success">{card.cardname} of {card.cardsuit}</Link>
         </div>
     );

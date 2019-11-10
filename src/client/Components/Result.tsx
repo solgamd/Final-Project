@@ -1,9 +1,9 @@
 import * as React from 'react';
-import { ICard } from '../utils/interfaces';
 import { RouteComponentProps } from 'react-router';
 import { string } from 'prop-types';
 import { useState, useEffect } from 'react';
 import { json } from '../utils/api';
+import { Link } from 'react-router-dom';
 
 export interface ResultProps extends RouteComponentProps<{ id: string }> {
 }
@@ -32,27 +32,29 @@ const Result: React.SFC<ResultProps> = props => {
 
     return (
         <>
-        <section className="row justify-content-center d-flex">
-            <div className="col text-center">
-                {/* <h1>Reading</h1> */}
-                <h3>{result.cardname} of {result.cardsuit}</h3>
-                <img src={`images/${result.suitid}.png`} className="icon" alt="Result icon"></img>
-            </div>
-        </section>
-        <section className="row">
-            <div className="col-sm-6 text-center">
-                <p><b>Category: </b>Text of interpretation</p>
-                <p><b>Category: </b>Text of interpretation</p>
-                <p><b>Category: </b>Text of interpretation</p>
-                <p><b>Category: </b>Text of interpretation</p>
-            </div>
-            <div className="col-sm-6 text-center">
-                <p><b>Category: </b>Text of interpretation</p>
-                <p><b>Category: </b>Text of interpretation</p>
-                <p><b>Category: </b>Text of interpretation</p>
-                <p><b>Category: </b>Text of interpretation</p>
-            </div>
-        </section>
+            <section className="row justify-content-center d-flex">
+                <div className="col text-center">
+                    <h2 className="m-4">{result.cardname} of {result.cardsuit}</h2>
+                    <img src={`images/${result.suitid}.png`} className="icon" alt="Result icon"></img>
+                </div>
+            </section>
+            <section className="row">
+                <div className="col-sm-6 text-center">
+                    <p><b>Category: </b>Text of interpretation</p>
+                    <p><b>Category: </b>Text of interpretation</p>
+                    <p><b>Category: </b>Text of interpretation</p>
+                    <p><b>Category: </b>Text of interpretation</p>
+                </div>
+                <div className="col-sm-6 text-center">
+                    <p><b>Category: </b>Text of interpretation</p>
+                    <p><b>Category: </b>Text of interpretation</p>
+                    <p><b>Category: </b>Text of interpretation</p>
+                    <p><b>Category: </b>Text of interpretation</p>
+                </div>
+                <div className="row">
+                    <Link to="reading" className="btn btn-secondary">Do Another Reading</Link>
+                </div>
+            </section>
         </>
     );
 }
