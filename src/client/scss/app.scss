@@ -23,8 +23,8 @@ $font-other: (
 @import '../../../node_modules/bootstrap/scss/bootstrap.scss';
 
 .logo {
-    height: 75px;
-    width: 75px
+    height: 60px;
+    width: 60px
 }
 
 body {
@@ -50,10 +50,6 @@ body {
 
 .col-4 {
     height: 400px
-}
-
-.card-text {
-    font-family: $font-other
 }
 
 .spinner {
@@ -89,7 +85,19 @@ body {
     max-height: 400px;
     width: 300px;
     max-width: 300px;
-    margin: 5px
+    margin: 5px;
+    
+    h3 {
+        font-family: $font-other;
+        font-size: 28px;
+        color: $dark
+    }
+
+    h5 {
+        font-family: $font-other;
+        font-size: 21px;
+        color: $dark
+    }
 }
 
 .card-container {
@@ -106,11 +114,6 @@ body {
 
 .col {
     justify-content: center;
-}
-
-.start-text {
-    font-family: $font-other;
-    // margin: 5px
 }
 
 .inner-outline {
