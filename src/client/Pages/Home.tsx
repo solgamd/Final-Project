@@ -16,14 +16,14 @@ const Home: React.SFC<HomeProps> = () => {
                     <h3>Welcome to Tarot Reader</h3>
                     <h5>This app focused on the spread of The Court Arcana. This requires asking the deck specific types of questions, 
                         and you can read more about it to ensure you're using it correctly.</h5>
-                    <Link to="/CourtArcana" className="btn btn-secondary">The Court Arcana</Link>
+                    {/* <Link to="/courtarcana" className="btn btn-secondary">The Court Arcana</Link> */}
                 </div>
                 
                 <p>As written by the tarot expert/psychic/teacher, Nancy Garen: "The cards are not "magical", "occult", or "evil"...
                    <i>You</i> empower them with your beliefs, attitudes, and personality and by your level of growth or understanding at the time you choose them.
                </p>
                 <div className="row">
-                    <Link to="/Reading" className="btn btn-secondary">Do a Reading</Link>
+                    <Link to="/reading" className="btn btn-secondary">Do a Reading</Link>
                 </div>
             </section>
         </main>

@@ -6,9 +6,10 @@ import LoadingOverlay from 'react-loading-overlay';
 import { useState, useEffect } from 'react';
 import StartPanel from '../Components/StartPanel';
 import FinishPanel from '../Components/FinishPanel';
+import { Link } from 'react-router-dom';
 
 export interface ReadingProps {
-    cards: ICard
+   cards: ICard
 }
 
 export interface ReadingState {
@@ -27,6 +28,7 @@ const Reading: React.SFC<ReadingProps> = () => {
         (async () => {
             try {
                 let cards = await json('/api/cards');
+                console.log(cards);
                 setCards(cards);
             } catch (error) {
                 console.log(error);
@@ -35,23 +37,36 @@ const Reading: React.SFC<ReadingProps> = () => {
     }, []);
 
     const handleShuffle = async (e: React.MouseEvent<HTMLButtonElement>) => {
-        setShuffle(true);
-        setTimeout(() => {
-            setShuffle(false);
-        }, 1500);
-        return clearTimeout();
+        try {
+            setShuffle(true);
+            setTimeout(() => {
+                setShuffle(false);
+            }, 1500);
+            return clearTimeout();
+        } catch (error) {
+            console.log(error);
+        }
     };
 
     const handlePullCard = async (e: React.MouseEvent<HTMLButtonElement>) => {
-        const drawCard = Math.floor(Math.random() * (12 - 1) + 1);
-        setPullCard(drawCard);
+        try {
+            const drawCard = Math.floor(Math.random() * (12 - 1) + 1);
+            setPullCard(drawCard);
+        } catch (error) {
+            console.log(error);
+        }
     };
 
     const handleNewQuestion = async (e: React.MouseEvent<HTMLButtonElement>) => {
-        setPullCard(0);
+        try {
+            setPullCard(0);
+        } catch (error) {
+            console.log(error);
+        }
     };
 
     return (
+        
         <main className="container">
             <div className="row">
                 <div className="col-sm-8 rounded justify-content-between shadow">
@@ -64,7 +79,7 @@ const Reading: React.SFC<ReadingProps> = () => {
                                         <Spinner animation="grow" variant="success"><span className="sr-only">Loading...</span></Spinner>
                                         <h5 className="text-white font-weight-bolder">Shuffling...</h5>
                                     </div>}>
-                                    {pullCard === 0 ? <img className="image rounded" src={`images/00.jpg`} alt={`tarot_card_0`} /> : <img className="image" src={`images/${pullCard}.jpg`} alt={`tarot_card_${pullCard}`} />}
+                                    {pullCard == 0 ? <img className="image rounded" src={`images/00.jpg`} alt={`tarot_card_0`} /> : <img className="image" src={`images/${pullCard}.jpg`} alt={`tarot_card_${pullCard}`} />}
                                 </LoadingOverlay>
                             </div>
                             <div className="text-center mt-3 justify-content-around">
@@ -73,7 +88,7 @@ const Reading: React.SFC<ReadingProps> = () => {
                             </div>
                         </div>
                         <div className="col pt-2">
-                            {pullCard == 0 ? <StartPanel /> : <FinishPanel cards={cards} />}
+                        {pullCard == 0 ? <StartPanel /> : <FinishPanel cards={cards}/>}
                             <div className="text-center mt-3">
                                 <button className="btn btn-warning shadow" onClick={(e: React.MouseEvent<HTMLButtonElement>) => handleNewQuestion(e)}>Ask New Question</button>
                             </div>

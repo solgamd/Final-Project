@@ -14,7 +14,7 @@ router.get('/', async (req, res, next) => {
     }
 });
 
-router.get('/:id', async (req, res, next) => {
+router.get('/:id', async (req: any, res, next) => {
     try {
         let cards = await db.cards.getOne(req.params.id);
         res.json(cards);

@@ -4,5 +4,7 @@ export interface ICard {
     cardname: string,
     cardsuit: string,
     suitid: number,
-    source: string
+    astro: string,
+    typeperson: string,
+    typevoc: string
 }
