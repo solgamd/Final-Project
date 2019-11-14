@@ -6,7 +6,6 @@ import LoadingOverlay from 'react-loading-overlay';
 import { useState, useEffect } from 'react';
 import StartPanel from '../Components/StartPanel';
 import FinishPanel from '../Components/FinishPanel';
-import { Link } from 'react-router-dom';
 
 export interface ReadingProps {
    cards: ICard
@@ -53,7 +52,7 @@ const Reading: React.SFC<ReadingProps> = () => {
             const drawCard = Math.floor(Math.random() * (12 - 1) + 1);
             setPullCard(drawCard);
         } catch (error) {
-            console.log(error);
+            console.log("Error from handlePullCard:", error);
         }
     };
 
@@ -88,7 +87,7 @@ const Reading: React.SFC<ReadingProps> = () => {
                             </div>
                         </div>
                         <div className="col pt-2">
-                        {pullCard == 0 ? <StartPanel /> : <FinishPanel cards={cards}/>}
+                        {pullCard == 0 ? <StartPanel /> : <FinishPanel cards={cards} />}
                             <div className="text-center mt-3">
                                 <button className="btn btn-warning shadow" onClick={(e: React.MouseEvent<HTMLButtonElement>) => handleNewQuestion(e)}>Ask New Question</button>
                             </div>

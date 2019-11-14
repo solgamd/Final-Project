@@ -18,7 +18,7 @@ const FinishPanel: React.SFC<FinishPanelProps> = () => {
                 let cards = await json('/api/cards');
                 setCards(cards);
             } catch (error) {
-                console.log(error);
+                console.log("Problem in FinishPanel UseEffect:", error);
             }
         })()
     },[]);

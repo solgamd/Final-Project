@@ -10,20 +10,19 @@ const Home: React.SFC<HomeProps> = () => {
         <main className="container my-5">
             <section>
                 <div className="row">
-                    <h1 className="tarot-title text-primary">Get Witchy</h1>
+                    <h1 className="tarot-title text-primary"></h1>
                 </div>
+                <h5 className="text-success">"The cards are not "magical", "occult", or "evil...</h5>
+                <h5 className="text-success"><b>You</b> empower them with your beliefs, attitudes, and personality and by your level of growth or understanding at the time you choose them."</h5>
+                <h6 className="d-flex justify-content-end text-success">- Nancy Garen, tarot expert/psychic/teacher</h6>
                 <div className="col">
-                    <h3>Welcome to Tarot Reader</h3>
-                    <h5>This app focused on the spread of The Court Arcana. This requires asking the deck specific types of questions, 
-                        and you can read more about it to ensure you're using it correctly.</h5>
-                    {/* <Link to="/courtarcana" className="btn btn-secondary">The Court Arcana</Link> */}
+                    <p className="d-flex justify-content-center mt-5">Welcome to Tarot Reader</p>
+                    <p>Your reading will be done through The Court Arcana Spread. Read more about The Spread and its instructions before you do your reading.</p>
                 </div>
-                
-                <p>As written by the tarot expert/psychic/teacher, Nancy Garen: "The cards are not "magical", "occult", or "evil"...
-                   <i>You</i> empower them with your beliefs, attitudes, and personality and by your level of growth or understanding at the time you choose them.
-               </p>
                 <div className="row">
-                    <Link to="/reading" className="btn btn-secondary">Do a Reading</Link>
+      
+                    <Link to="/spread" className="btn btn-secondary justify-content-center">The Spread</Link>
+                   
                 </div>
             </section>
         </main>

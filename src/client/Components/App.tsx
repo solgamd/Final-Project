@@ -14,16 +14,19 @@ class App extends React.Component<AppProps, AppState> {
         return (
             <BrowserRouter>
                 <nav className="navbar nav nav-pills nav-fill bg-success">
-                    <a href="/" className="logo navbar-brand"><img src="images/logosmall.png" className="logo" alt="logo" /></a>
-                    <Link className="m-2 link nav-link btn btn-outline-secondary" to="/">Home</Link>
-                    {/* <Link className="m-2 link nav-link btn btn-outline-secondary" to="/spread">The Spread</Link> */}
-                    <Link className="m-2 link nav-link btn btn-secondary" to="/reading">Do a Reading</Link>
+                    <div className="bg-success d-flex justify-content-start">
+                        <a href="/" className="logo navbar-brand"><img src="images/logosmall.png" className="logo" alt="logo" /></a>
+                    </div>
+                    <div className="d-flex flex-end flex-row">
+                        <Link className="m-2 link nav-link btn btn-outline-secondary" to="/spread">The Spread</Link>
+                        <Link className="m-2 link nav-link btn btn-secondary" to="/reading">Do a Reading</Link>
+                    </div>
                 </nav>
                 <Switch>
                     <Route exact path="/" component={Home} />
-                    <Route exact path="/:id" component={Result} />
-                    {/* <Route exact path="/spread" component={Spread} /> */}
+                    <Route exact path="/spread" component={Spread} />
                     <Route exact path="/reading" component={Reading} />
+                    <Route exact path="/:id/result" component={Result} />
                 </Switch>
             </BrowserRouter>
         )

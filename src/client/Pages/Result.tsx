@@ -3,7 +3,6 @@ import { RouteComponentProps } from 'react-router';
 import { useState, useEffect } from 'react';
 import { json } from '../utils/api';
 import { Link } from 'react-router-dom';
-import { ICard } from '../utils/interfaces';
 
 export interface ResultProps extends RouteComponentProps<{ id: string }> { }
 
@@ -19,14 +18,12 @@ const Result: React.SFC<ResultProps> = props => {
         typevoc: ''
     });
 
-    // const [result, setResult] = useState<ICard[]>([]);
-    // const [cardname, setCardname] = useState<string>('')
-
     useEffect(() => {
         (async () => {
             try {
-                let [result]: any = await json(`/api/cards/${props.match.params.id}`); // no [] = empty array - [] = undefined
+                let [result]: any = await json(`/api/cards/${props.match.params.id}`);  // = {[]}
                 setResult(result);
+                console.log(result.suitid);
             } catch (error) {
                 console.log(error);
             }
