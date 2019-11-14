@@ -5,7 +5,7 @@ import { json } from '../utils/api';
 import InterpretLinks from './InterpretLinks';
 
 export interface FinishPanelProps {
-    cards: ICard[]
+    cards: ICard[];
 }
 
 const FinishPanel: React.SFC<FinishPanelProps> = () => {

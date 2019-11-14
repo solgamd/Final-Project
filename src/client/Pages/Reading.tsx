@@ -6,31 +6,28 @@ import LoadingOverlay from 'react-loading-overlay';
 import { useState, useEffect } from 'react';
 import StartPanel from '../Components/StartPanel';
 import FinishPanel from '../Components/FinishPanel';
+import { RouteComponentProps } from 'react-router';
 
-export interface ReadingProps {
-   cards: ICard
-}
-
-export interface ReadingState {
-    cards: ICard,
-    pulledCard: number,
-    shuffle: boolean
+export interface ReadingProps extends RouteComponentProps{
+   cards: ICard;
+//    children: Element;
+//    variant: string;
+//    animation: string;
 }
 
 const Reading: React.SFC<ReadingProps> = () => {
 
     const [cards, setCards] = useState<ICard[]>([]);
-    const [shuffle, setShuffle] = useState(false);
-    const [pullCard, setPullCard] = useState(0);
+    const [shuffle, setShuffle] = useState<boolean>(false);
+    const [pullCard, setPullCard] = useState<number>(0);
 
     useEffect(() => {
         (async () => {
             try {
                 let cards = await json('/api/cards');
-                console.log(cards);
                 setCards(cards);
             } catch (error) {
-                console.log(error);
+                console.log("Problem in Reading UseEffect:", error);
             }
         })()
     }, []);
@@ -65,7 +62,6 @@ const Reading: React.SFC<ReadingProps> = () => {
     };
 
     return (
-        
         <main className="container">
             <div className="row">
                 <div className="col-sm-8 rounded justify-content-between shadow">

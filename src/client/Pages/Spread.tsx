@@ -4,7 +4,7 @@ export interface SpreadProps { }
 
 const Spread: React.SFC<SpreadProps> = () => {
     return (
-        <div className="row">
+        <div className="row justify-content-center">
             <h3>The Court Arcana Spread</h3>
             <p>This is the only reading specifically geared to: Who, What, Where, When.
                 The interpretation takes only one card and is the easiest, most precise way to answer

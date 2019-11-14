@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ICard } from '../utils/interfaces';
 
@@ -8,8 +7,6 @@ export interface InterpretLinksProps {
 }
 
 const InterpretLinks: React.SFC<InterpretLinksProps> = ({ card }) => {
-
-    const [links, setLinks] = useState<ICard>();
 
     return (
         <div className="col">
