@@ -24,13 +24,23 @@ $font-other: (
 
 .logo {
     height: 60px;
-    width: 60px
+    width: 60px;
 }
 
 body {
     font-family: $font-main;
     color: $secondary;
+    // background: {
+    //     // image: url('/images/moon3.jpg');
+    //     size: cover;
+    //     attachment: scroll;
+    //     opacity: 0.1
+    // }
 }
+
+// .bg-home {
+    
+// }
 
 .link {
     font-size: 18px;

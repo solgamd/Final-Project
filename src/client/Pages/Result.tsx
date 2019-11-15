@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom';
 
 export interface ResultProps extends RouteComponentProps<{ id: string }> {
     variant: string;
-   animation: string;
- }
+    animation: string;
+}
 
 const Result: React.SFC<ResultProps> = props => {
 
@@ -19,12 +19,14 @@ const Result: React.SFC<ResultProps> = props => {
         typeperson: '',
         typevoc: ''
     });
+    const [suitid, setSuitid] = useState<string>('');
 
     useEffect(() => {
         (async () => {
             try {
-                let [result]: any = await json(`/api/cards/${props.match.params.id}`);  
+                let [result]: any = await json(`/api/cards/${props.match.params.id}`);
                 setResult(result);
+                setSuitid(result.suitid)
             } catch (error) {
                 console.log("Problem in Result UseEffect:", error);
             }
@@ -36,12 +38,16 @@ const Result: React.SFC<ResultProps> = props => {
             <main className="row justify-content-center d-flex">
                 <div className="col text-center">
                     <h1 className="start-text mt-3">{result.cardname} of {result.cardsuit}</h1>
-                    <img src={`images/${result.suitid}.png`} className="icon" alt={"result_icon"} />
+                    <div>
+                        <img src={`/images/${suitid}.png`} className="icon" alt={"result_icon"} />
+
+                    </div>
                 </div>
             </main>
             <section className="row">
-                <div className="col-sm-5 shadow p-4 m-1">
-                    <p><b>Astrological Sign: </b>{result.astro}</p>
+                <div className="col-sm-5 shadow p-4 m-1 justify-content-center">
+                    <p><b>Astrological Sign:</b></p>
+                    <p>{result.astro}</p>
                 </div>
                 <div className="col-sm-5 shadow p-4 m-1">
                     <p><b>Type of Person: </b>{result.typeperson}</p>
@@ -49,7 +55,7 @@ const Result: React.SFC<ResultProps> = props => {
                 </div>
             </section>
             <div className="row">
-                <Link to="/reading" className="btn btn-secondary mb-5">Do Another Reading</Link>
+                <Link to="/reading" className="btn btn-secondary mb-5 shadow">Do Another Reading</Link>
             </div>
         </>
     );

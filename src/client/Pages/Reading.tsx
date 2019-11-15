@@ -10,9 +10,6 @@ import { RouteComponentProps } from 'react-router';
 
 export interface ReadingProps extends RouteComponentProps{
    cards: ICard;
-//    children: Element;
-//    variant: string;
-//    animation: string;
 }
 
 const Reading: React.SFC<ReadingProps> = () => {
