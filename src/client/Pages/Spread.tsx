@@ -8,9 +8,9 @@ const Spread: React.SFC<SpreadProps> = () => {
         <>
             <main className="container spread-cont">
                 <div className="row">
-                    <h3 className="m-3">The Court Arcana Spread</h3>
-                    <div className="col-9 bg-home">
-                        <div className="text-grey">
+                    <h3 className="m-3 tarot-title">The Court Arcana Spread</h3>
+                    <div className="col-10 bg-home">
+                        <div className="text-grey mt-3">
                             <p>This is the only reading specifically geared to: Who, What, Where, When.</p>
                             <p>This deck consists only of the 12 astrological Court Arcana cards: the King, Queen, and Page of each suit.</p>
                             <p>The interpretation takes only one card and is the easiest, most precise way to answer
@@ -35,9 +35,12 @@ const Spread: React.SFC<SpreadProps> = () => {
                             </ol>
                         </div>
                         <div className="d-flex justify-content-center">
-                            <Link to="/reading" className="btn btn-primary shadow mt-3">Do a Reading</Link>
+                            <Link to="/reading" className="btn btn-secondary shadow mt-3">Do a Reading</Link>
                         </div>
                     </div>
+                </div>
+                <div className="footer">
+                    <p className="font-small">Text taken from Tarot Made Easy by Nancy Garen.</p>
                 </div>
             </main>
         </>

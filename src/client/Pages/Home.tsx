@@ -24,7 +24,7 @@ const Home: React.SFC<HomeProps> = () => {
                 <h5 className="text-subtitle">Ou readings use the Court Arcana Spread.</h5>
 
                 <div className="text-center">
-                    <h5 className="text-subtitle">Before you do your reading...</h5>
+                    <h5 className="text-subtitle mt-4">Before you do your reading...</h5>
                     <Link to="/spread" className="btn btn-secondary shadow text-center text-white">Learn about the Court Arcana Spread</Link>
                 </div>
             </section>

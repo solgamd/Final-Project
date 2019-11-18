@@ -4,6 +4,7 @@ import Home from '../Pages/Home';
 import Reading from '../Pages/Reading';
 import Result from '../Pages/Result';
 import Spread from '../Pages/Spread';
+import Suits from './Suits';
 
 export interface AppProps { }
 export interface AppState { }
@@ -16,8 +17,9 @@ const App: React.SFC<AppProps> = () => {
                     <a href="/" className="logo bg-purple"><img src='/images/logosmall.png' className="logo" alt="logo" /></a>
                 </div>
                 <div className="d-flex flex-end flex-row">
-                    <Link className="m-2 link nav-link btn btn-outline-grey" to="/spread">The Spread</Link>
-                    <Link className="m-2 link nav-link btn btn-grey" to="/reading">Do a Reading</Link>
+                    <Link to="/suits" className="m-2 link nav-link btn btn-outline-secondary" aria-pressed="true">The Suits</Link>
+                    <Link to="/spread" className="m-2 link nav-link btn btn-outline-secondary" aria-pressed="true">The Spread</Link>
+                    <Link to="/reading" className="m-2 link nav-link btn btn-secondary" aria-pressed="true">Do a Reading</Link>
                 </div>
             </nav>
             <Switch>
@@ -25,6 +27,7 @@ const App: React.SFC<AppProps> = () => {
                 <Route exact path="/spread" component={Spread} />
                 <Route exact path="/reading" component={Reading} />
                 <Route exact path="/:id/result" component={Result} />
+                <Route exact path="/suits" component={Suits} />
             </Switch>
         </BrowserRouter>
     )
