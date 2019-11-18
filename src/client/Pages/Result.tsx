@@ -55,7 +55,7 @@ const Result: React.SFC<ResultProps> = props => {
                 </div>
             </section>
             <div className="row">
-                <Link to="/reading" className="btn btn-secondary mb-5 shadow">Do Another Reading</Link>
+                <Link to="/reading" className="btn btn-grey mb-5 shadow">Do Another Reading</Link>
             </div>
         </>
     );

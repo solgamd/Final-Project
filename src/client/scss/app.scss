@@ -1,22 +1,45 @@
-$theme-colors: (
-    'primary': #AACAA2,
-    'secondary': #8797b2,
-    'warning': #CB3A35,
-    'alert': #F9D51A,
-    'dark': #2D3047,
-    'info': #4B3B47,
-    'success': #38369A
-    // 221D23 raisin black
-    // 2D3047 black
-    // 464655 gray
-    // 38369A royal blue
-    // 6622CC grape
-);
-$font-main: (
-    'Quicksand', sans-serif
+// theme colors
+$green: #AACAA2;
+$grey: #8797b2;
+$red:  #CB3A35;
+$gold: #F9D51A;
+$dark: #2D3047;
+$raisin: #4B3B47;
+$purple: #38369A;
+
+$primary: $green;
+$secondary: $grey;
+$warning: $red;
+$alert: $gold;
+
+// 221D23 raisin black
+// 2D3047 black
+// 464655 gray
+// 38369A royal blue
+// 6622CC grape
+
+@mixin font($font-family, $font-file) {
+    @font-face {
+    font-family: 'Aladin, cursive';
+    font-family: 'Quicksand', sans serif;
+    src: url('/public/fonts/Aladin-Regular.woff') format('woff');
+    src: url('/public/fonts/Quicksand-Regular.woff') format('woff');
+    src: url('/public/fonts/Quicksand-SemiBold.woff') format('woff');
+    src: url('/public/fonts/Quicksand-Light.woff') format('woff');
+    }
+}
+
+// @include font('Aladin', '/public/fonts/Aladin-Regular.woff');
+// @include font('Quicksand', '/public/fonts/Quicksand-SemiBold.woff');
+// @include font('Quicksand', '/public/fonts/Quicksand-Light.woff');
+// @include font('Quicksand', '/public/fonts/Quicksand-Regular.woff');
+
+$font-quick: (
+    'Quicksand', 'Quicksand-SemiBold', sans-serif
 );
 
-$font-other: (
+
+$font-ala: (
     'Aladin', cursive
 );
 
@@ -28,28 +51,43 @@ $font-other: (
 }
 
 body {
-    font-family: $font-main;
-    color: $secondary;
-    // background: {
-    //     // image: url('/images/moon3.jpg');
-    //     size: cover;
-    //     attachment: scroll;
-    //     opacity: 0.1
-    // }
+    margin: 8px;
+    font-family: $font-quick;
+    background: {
+        color: $purple;
+        // image: url('/images/moon3.jpg');
+        size: cover;
+        attachment: scroll;
+        opacity: 0.1
+    }
 }
 
-// .bg-home {
-    
-// }
 
 .link {
     font-size: 18px;
     font-weight: 400;
-    font-family: $font-main
+    font-family: $font-quick
 }
 
 .tarot-title {
-    font-family: $font-other
+    font-family: 'Aladin', cursive;
+    color: $grey;
+}
+
+.text-subtitle {
+    text-align: center;
+    color: $grey
+}
+
+.gold-card {
+    border-radius: 0px 70px ;
+    background: {
+        image: url('/images/gold.jpg');
+        size: cover
+    }
+    color: $dark;
+    font-weight: 600;
+    box-shadow: gold;
 }
 
 .row {
@@ -98,13 +136,13 @@ body {
     margin: 5px;
     
     h3 {
-        font-family: $font-other;
+        font-family: $font-ala;
         font-size: 28px;
         color: $dark
     }
 
     h5 {
-        font-family: $font-other;
+        font-family: $font-ala;
         font-size: 21px;
         color: $dark
     }
@@ -113,13 +151,13 @@ body {
 .card-container {
     height: 200px;
     width: 200px;
-    background-color: $secondary; 
+    background-color: $grey; 
 }
 
 .btn {
     margin: 5px 5px 5px 0px;
-    box-shadow: 5px black;
-    font-size: 16px
+    box-shadow: 5px dark;
+    font-size: 16px;
 }
 
 .col {
@@ -132,5 +170,11 @@ body {
 }
 
 hr {
-    border-color: $dark
+    border-color: $dark;
+}
+
+.spread-cont {
+    p, h3, h5, li {
+        color: $grey
+    }
 }

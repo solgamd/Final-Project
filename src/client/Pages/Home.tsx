@@ -8,20 +8,26 @@ const Home: React.SFC<HomeProps> = () => {
 
     return (
         <>
-        {/* <main className="container my-5"> */}
-            <section className="container p-3 m-4">
-                <h5 className="text-primary">The cards are not "magical", "occult", or "evil"...</h5>
-                <h5 className="text-primary"><b>You</b> empower them with your beliefs, attitudes, and personality and by your level of growth or understanding at the time you choose them.</h5>
-                <h6 className="d-flex justify-content-end text-primary">- Nancy Garen, tarot expert/psychic/teacher</h6>
+            <section className="container-fluid bg-purple justify-content-center p-3">
+                <h1 className="tarot-title text-center">Tarot Reader</h1>
+                <h2 className="tarot-title text-center">The Court Arcana</h2>
             </section>
-            <div className="row justify-content-center">
-                <p className="d-flex justify-content-center mt-5">Welcome to Tarot Reader</p>
-                <p>Your reading will be done through The Court Arcana Spread. Be sure to read about The Spread and its instructions before you do your reading.</p>
-            </div>
-            <div className="col justify-content-center">
-                <Link to="/spread" className="btn btn-secondary shadow justify-content-center">The Spread</Link>
-            </div>
-     {/* </main > */}
+            <section className="container col-9 justify-content-center p-3">
+                <div className="card p-3 gold-card">
+                    <p className="text-dark">The cards are not "magical", "occult", or "evil"...</p>
+                    <p className="text-dark"><b>You</b> empower them with your beliefs, attitudes, and personality and by your level of growth or understanding at the time you choose them.</p>
+                    <p className="d-flex justify-content-end text-dark">- Nancy Garen, tarot expert/psychic/teacher</p>
+                </div>
+            </section>
+            <section className="container col-9 justify-content-center p-3">
+                <h5 className="text-subtitle">In tarot there are many types of readings. The one you use depends on the type of reading you want or how detailed you'd like to get.</h5> 
+                <h5 className="text-subtitle">Ou readings use the Court Arcana Spread.</h5>
+
+                <div className="text-center">
+                    <h5 className="text-subtitle">Before you do your reading...</h5>
+                    <Link to="/spread" className="btn btn-secondary shadow text-center text-white">Learn about the Court Arcana Spread</Link>
+                </div>
+            </section>
         </>
     )
 }
