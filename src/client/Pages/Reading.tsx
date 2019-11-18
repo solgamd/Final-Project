@@ -61,7 +61,7 @@ const Reading: React.SFC<ReadingProps> = () => {
     return (
         <main className="container">
             <div className="row">
-                <div className="col-sm-8 rounded justify-content-between shadow">
+                <div className="col-sm-8 bg-alert rounded justify-content-between shadow">
                     <div className="row justify-content-around">
                         <div className="col pt-2">
                             <div className="card card-1 mx-auto inner-outline">
@@ -75,14 +75,14 @@ const Reading: React.SFC<ReadingProps> = () => {
                                 </LoadingOverlay>
                             </div>
                             <div className="text-center mt-3 justify-content-around">
-                                <button className="btn btn-purple shadow mx-2" onClick={(e: React.MouseEvent<HTMLButtonElement>) => handleShuffle(e)}>Shuffle</button>
-                                <button className="btn btn-purple shadow mx-2" onClick={(e: React.MouseEvent<HTMLButtonElement>) => handlePullCard(e)}>Pull A Card</button>
+                                <button className="btn btn-info shadow mx-2" onClick={(e: React.MouseEvent<HTMLButtonElement>) => handleShuffle(e)}>Shuffle</button>
+                                <button className="btn btn-info shadow mx-2" onClick={(e: React.MouseEvent<HTMLButtonElement>) => handlePullCard(e)}>Pull A Card</button>
                             </div>
                         </div>
                         <div className="col pt-2">
                         {pullCard == 0 ? <StartPanel /> : <FinishPanel cards={cards} />}
                             <div className="text-center mt-3">
-                                <button className="btn btn-red shadow" onClick={(e: React.MouseEvent<HTMLButtonElement>) => handleNewQuestion(e)}>Ask New Question</button>
+                                <button className="btn btn-warning shadow" onClick={(e: React.MouseEvent<HTMLButtonElement>) => handleNewQuestion(e)}>Ask New Question</button>
                             </div>
                         </div>
                     </div>

@@ -11,6 +11,7 @@ $primary: $green;
 $secondary: $grey;
 $warning: $red;
 $alert: $gold;
+$info: $purple;
 
 // 221D23 raisin black
 // 2D3047 black
@@ -72,6 +73,7 @@ body {
 .tarot-title {
     font-family: 'Aladin', cursive;
     color: $grey;
+    font-size: 34px
 }
 
 .text-subtitle {
@@ -125,7 +127,7 @@ body {
     max-height: 400px;
     width: 235px;
     max-width: 235px;
-    margin: 5px
+    margin: 5px;
 }
 
 .card-2 {
@@ -177,4 +179,12 @@ hr {
     p, h3, h5, li {
         color: $grey
     }
+}
+
+.img-suits {
+    height: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px
 }
