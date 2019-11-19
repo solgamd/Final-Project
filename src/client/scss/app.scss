@@ -121,6 +121,13 @@ body {
     margin: 5px
 }
 
+.cards-cont {
+    background: {
+        color: white;
+        opacity: .5
+    }
+}
+
 .card-1 {
     height: 400px;
     max-height: 400px;
@@ -135,6 +142,7 @@ body {
     width: 300px;
     max-width: 300px;
     margin: 5px;
+    background-color: $green;
     
     h3 {
         font-family: $font-ala;
@@ -149,11 +157,11 @@ body {
     }
 }
 
-.card-container {
-    height: 200px;
-    width: 200px;
-    background-color: $grey; 
-}
+// .card-container {
+//     height: 200px;
+//     width: 200px;
+//     background-color: $grey; 
+// }
 
 .btn {
     margin: 5px 5px 5px 0px;

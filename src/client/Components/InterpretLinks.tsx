@@ -10,7 +10,7 @@ const InterpretLinks: React.SFC<InterpretLinksProps> = ({ card }) => {
 
     return (
         <div className="col">
-            <Link to={`/${card.id}/result`} className="text-purple">{card.cardname} of {card.cardsuit}</Link>
+            <Link to={`/${card.id}/result`} className="text-dark">{card.cardname} of {card.cardsuit}</Link>
         </div>
     );
 }

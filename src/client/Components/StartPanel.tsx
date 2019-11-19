@@ -4,7 +4,7 @@ export interface StartPanelProps { }
 
 const StartPanel: React.SFC<StartPanelProps> = () => {
   return (
-    <div className="card card-2 mx-auto bg-green text-center inner-outline">
+    <div className="card card-2 mx-auto text-center inner-outline">
       <h3 className="m-3 mt-5">TO DO A READING</h3>
       <h5 className="mx-3">Think of your question while you <b className="text-purple">SHUFFLE</b> the cards—</h5>
       <h5 className="mx-3">Be sure to shuffle well!</h5>

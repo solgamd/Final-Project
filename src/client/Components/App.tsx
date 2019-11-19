@@ -31,14 +31,14 @@ const App: React.SFC<AppProps> = () => {
             </Switch>
             <section className="row footer">
                 <div className="col-xl-8 col-lg-8 col-md-8 bg-dark pl-5">
-                    <div className="d-flex flex-column my-auto">
-                        <Link to="/suits" className="my-2 text-danger">The Suits</Link>
-                        <Link to="/spread" className="my-2 text-danger">The Spread</Link>
-                        <Link to="/reading" className="my-2 text-danger">Do a Reading</Link>
+                    <div className="d-flex flex-column mt-2">
+                        <Link to="/suits" className="my-2 text-primary">The Suits</Link>
+                        <Link to="/spread" className="my-2 text-primary">The Spread</Link>
+                        <Link to="/reading" className="my-2 text-primary">Do a Reading</Link>
                     </div>
                 </div>
-                <div className="col-xl-4 col-lg-4 col-md-4 py-3 bg-secondary">
-                    <p>Much of the text on this app was borrowed from Nancy Garen's <i>Tarot Made Easy</i>. Check out her book to learn more about tarot.</p>
+                <div className="col-xl-4 col-lg-4 col-md-4 py-3 bg-dark">
+                    <p className="text-secondary mr-5 mt-2">Much of the text on this app was borrowed from Nancy Garen's <i>Tarot Made Easy</i>. Check out her book to learn more about tarot.</p>
                 </div>
             </section>
         </BrowserRouter>
