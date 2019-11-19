@@ -10,7 +10,7 @@ $purple: #38369A;
 $primary: $green;
 $secondary: $grey;
 $warning: $red;
-$alert: $gold;
+$danger: $gold;
 $info: $purple;
 
 // 221D23 raisin black
@@ -89,7 +89,6 @@ body {
     }
     color: $dark;
     font-weight: 600;
-    box-shadow: gold;
 }
 
 .row {
@@ -187,4 +186,8 @@ hr {
     margin-right: 10px;
     margin-top: 20px;
     margin-bottom: 20px
+}
+
+.footer {
+    margin-top: 50px
 }

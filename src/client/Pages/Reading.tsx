@@ -61,7 +61,7 @@ const Reading: React.SFC<ReadingProps> = () => {
     return (
         <main className="container">
             <div className="row">
-                <div className="col-sm-8 bg-alert rounded justify-content-between shadow">
+                <div className="col-sm-8 bg-danger rounded justify-content-between shadow">
                     <div className="row justify-content-around">
                         <div className="col pt-2">
                             <div className="card card-1 mx-auto inner-outline">

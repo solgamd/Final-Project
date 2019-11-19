@@ -39,9 +39,6 @@ const Spread: React.SFC<SpreadProps> = () => {
                         </div>
                     </div>
                 </div>
-                <div className="footer">
-                    <p className="font-small">Text taken from Tarot Made Easy by Nancy Garen.</p>
-                </div>
             </main>
         </>
     );
