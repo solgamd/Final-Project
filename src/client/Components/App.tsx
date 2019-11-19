@@ -41,7 +41,7 @@ const App: React.SFC<AppProps> = () => {
                 </div>
                 <div className="col-xl-5 col-lg-5 col-md-5 py-3 pl-5 my-auto bg-dark">
                     <p className="text-secondary mr-5 mt-2">This tarot app is based off of Nancy Garen's <i>Tarot Made Easy</i>. Check out her book to learn more about tarot.</p>
-                    <p className="text-secondary mr-5 mt-0">View the <Link to="/sources">sources</Link> of other media in this app.</p>
+                    <p className="text-secondary mr-5 mt-0">View the <Link to="/sources">sources</Link> of media in this app.</p>
                 </div>
             </footer>
         </BrowserRouter>

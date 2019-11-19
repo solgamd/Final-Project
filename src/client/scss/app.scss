@@ -63,16 +63,62 @@ body {
     }
 }
 
-
 .link {
     font-size: 18px;
     font-weight: 400;
     font-family: $font-quick
 }
 
-.tarot-title {
-    font-family: 'Aladin', cursive;
-    color: $grey;
+.title-text {
+    font-size: 90px;
+    font-family: $font-ala;
+}
+
+.flex-circle {
+    max-height: 300px;
+    max-width: 300px;
+    height: auto;
+    width: auto;
+    margin-top: 100px;
+    margin-left: 25px;
+    margin-bottom: 25px;
+    margin-right: 25px;
+    border-radius: 200px;
+    background-color: $purple;
+}
+
+.flex-circle:before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+
+.gold-col {
+    background: {
+        image: url('/images/gold.jpg');
+        size: cover;
+        color: $grey;
+    }
+}
+.moon-col {
+    background: {
+        image: url('/images/moon4.jpg');
+        size: cover;
+        color: $gold;
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        z-index: 100
+    }
+    max-height: 100%;
+    max-width: 100%
+}
+
+.moon-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
 }
 
 .text-subtitle {
@@ -89,6 +135,10 @@ body {
     font-weight: 600;
 }
 
+// .container-fluid {
+//     margin-right: 0px;
+//     margin-left: 0px;
+// }
 .row {
     margin-top: 1em;
     margin-bottom: 1em;
@@ -119,8 +169,10 @@ body {
     margin: 5px
 }
 
-.cards-cont {
+.cards-cont, .card-2 {
     background: {
+        image: url('/images/gold.jpg');
+        size: cover;
         color: $dark;
         opacity: .5
     }
@@ -142,7 +194,7 @@ body {
     width: 300px;
     max-width: 300px;
     margin: 5px;
-    background-color: $green;
+    // background-color: $green;
     
     
     h3 {
@@ -197,3 +249,4 @@ hr {
     margin-top: 50px;
     background-color: $dark;
 }
+
