@@ -24,9 +24,9 @@ const FinishPanel: React.SFC<FinishPanelProps> = () => {
     },[]);
 
     return (
-        <div className="card card-2 mx-auto bg-danger text-center">
-            <h5 className="start-text text-dark mx-2 mt-3">SELECT YOUR CARD</h5>
-            <h5 className="start-text text-dark">TO SEE YOUR READING</h5>
+        <div className="card card-2 mx-auto bg-grey text-center">
+            <h5 className="text-dark mx-2 mt-3">SELECT YOUR CARD</h5>
+            <h5 className="text-dark">TO SEE YOUR READING</h5>
             {cards.map(card => {
                 return <InterpretLinks key={`interpret-${card.id}`} card={card} />
             })}

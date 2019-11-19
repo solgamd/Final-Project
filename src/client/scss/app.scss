@@ -169,7 +169,7 @@ body {
     margin: 5px
 }
 
-.cards-cont, .card-2 {
+.cards-cont {
     background: {
         image: url('/images/gold.jpg');
         size: cover;
@@ -184,7 +184,8 @@ body {
     width: 235px;
     max-width: 235px;
     margin: 5px;
-    background-color: $dark;
+    background-color: white;
+    border: 1px solid $gold;
 
 }
 
@@ -194,19 +195,19 @@ body {
     width: 300px;
     max-width: 300px;
     margin: 5px;
-    // background-color: $green;
-    
+    background-color: $grey;
+    border: 1px solid $gold;
     
     h3 {
         font-family: $font-ala;
         font-size: 28px;
-        color: $dark
+        color: $dark;
     }
 
     p {
         font-family: $font-quick;
         font-size: 17px;
-        color: $dark
+        color: $dark;
     }
 }
 
