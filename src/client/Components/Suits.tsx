@@ -7,11 +7,12 @@ const Suits: React.SFC<SuitsProps> = () => {
         <section className="container col-10 text-secondary justify-content-center">
             <div className="p-3">
                 <h3 className="tarot-title text-center m-3">The Suits</h3>
-                <div className="row justify-content-center">
-                    <img src="/images/21.png" className="img-suits" />
-                    <img src="/images/23.png" className="img-suits" />
-                    <img src="/images/22.png" className="img-suits" />
-                    <img src="/images/24.png" className="img-suits" />
+                <div className="row my-4 flex-row justify-content-center">
+                    <div className="col d-flex justify-content-end"><img src="/images/21.png" className="img-suits" /></div>
+                    <div className="col d-flex justify-content-start"><img src="/images/23.png" className="img-suits" /></div>
+                    <div className="w-100 my-2"></div>
+                    <div className="col d-flex justify-content-end"><img src="/images/22.png" className="img-suits" /></div>
+                    <div className="col d-flex justify-content-start"><img src="/images/24.png" className="img-suits" /></div>
                 </div>
                 <p className="text-center">The Suits—Wands, Cups, Swords, and Pentacles—are the esoteric formula or key to manifestation on the earth plane.</p>
                 <hr/>

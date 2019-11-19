@@ -5,12 +5,15 @@ export interface StartPanelProps { }
 const StartPanel: React.SFC<StartPanelProps> = () => {
   return (
     <div className="card card-2 mx-auto text-center inner-outline">
-      <h3 className="m-3 mt-5">TO DO A READING</h3>
-      <h5 className="mx-3">Think of your question while you <b className="text-purple">SHUFFLE</b> the cards—</h5>
-      <h5 className="mx-3">Be sure to shuffle well!</h5>
-      <h5 className="m-3">When you're ready, <b className="text-purple">PULL A CARD</b>.</h5>
+      <h3 className="mx-3 mt-5 mb-3">TO DO A READING</h3>
+      <p className="mx-3 my-0">Think of your question while</p>
+      <p className="my-0">you <b className="text-purple">SHUFFLE</b> the cards—</p>
+      <p className="mx-3">Be sure to shuffle well!</p>
+      <p className="mx-3 my-0">When you're ready,</p>
+      <p><b className="text-purple">PULL A CARD</b>.</p>
       <hr className="mx-5 color-dark"/>
-      <h5 className="m-3">If you'd like to ask another question, click <b className="text-red">ASK A NEW QUESTION</b>.</h5>
+      <p className="mx-3 my-0">If you'd like to ask another question, click</p>
+      <p><b className="text-red">ASK A NEW QUESTION</b>.</p>
     </div>
   );
 }

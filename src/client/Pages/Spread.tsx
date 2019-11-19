@@ -20,10 +20,10 @@ const Spread: React.SFC<SpreadProps> = () => {
                             <h5 className="mt-1">For example</h5>
                             <ul className="list-group ml-5">
                                 <li>What type of person would be best for me?</li>
-                                <li>What of person will I marry?</li>
+                                <li>What type of person will I marry?</li>
                                 <li>What work am I best suited to do?</li>
                                 <li>What work will I do?</li>
-                                <li>When would be the best time to sart this enterprise?</li>
+                                <li>When would be the best time to start this enterprise?</li>
                                 <li>What type of career will bring the most succcess?</li>
                             </ul>
                             <hr />

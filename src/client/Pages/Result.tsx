@@ -37,25 +37,25 @@ const Result: React.SFC<ResultProps> = props => {
         <>
             <main className="row justify-content-center d-flex">
                 <div className="col text-center">
-                    <h1 className="start-text mt-3">{result.cardname} of {result.cardsuit}</h1>
+                    <h1 className="mt-3 tarot-title">{result.cardname} of {result.cardsuit}</h1>
                     <div>
-                        <img src={`/images/${suitid}.png`} className="icon" alt={"result_icon"} />
+                        <img src={`/images/${suitid}.png`} className="icon m-2" alt={"result_icon"} />
 
                     </div>
                 </div>
             </main>
             <section className="row">
-                <div className="col-sm-5 shadow p-4 m-1 justify-content-center">
+                <div className="col-sm-5 rounded bg-primary shadow p-4 m-1 justify-content-center">
                     <p><b>Astrological Sign:</b></p>
                     <p>{result.astro}</p>
                 </div>
-                <div className="col-sm-5 shadow p-4 m-1">
+                <div className="col-sm-5 rounded bg-primary shadow p-4 m-1">
                     <p><b>Type of Person: </b>{result.typeperson}</p>
                     <p><b>Type of Vocation: </b>{result.typevoc}</p>
                 </div>
             </section>
             <div className="row">
-                <Link to="/reading" className="btn btn-grey mb-5 shadow">Do Another Reading</Link>
+                <Link to="/reading" className="btn btn-secondary mb-5 shadow">Do Another Reading</Link>
             </div>
         </>
     );
