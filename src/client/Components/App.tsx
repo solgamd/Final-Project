@@ -5,6 +5,7 @@ import Reading from '../Pages/Reading';
 import Result from '../Pages/Result';
 import Spread from '../Pages/Spread';
 import Suits from './Suits';
+import Sources from './Sources';
 
 export interface AppProps { }
 export interface AppState { }
@@ -28,6 +29,7 @@ const App: React.SFC<AppProps> = () => {
                 <Route exact path="/reading" component={Reading} />
                 <Route exact path="/:id/result" component={Result} />
                 <Route exact path="/suits" component={Suits} />
+                <Route exact path="/sources" components={Sources}/>
             </Switch>
             <footer className="row footer navbar-static-footer">
                 <div className="col-xl-5 col-lg-5 col-md-5 bcol-sm-12 pl-5 g-dark py-3 my-auto justify-content-start">
@@ -39,6 +41,7 @@ const App: React.SFC<AppProps> = () => {
                 </div>
                 <div className="col-xl-5 col-lg-5 col-md-5 py-3 pl-5 my-auto bg-dark">
                     <p className="text-secondary mr-5 mt-2">This tarot app is based off of Nancy Garen's <i>Tarot Made Easy</i>. Check out her book to learn more about tarot.</p>
+                    <p className="text-secondary mr-5 mt-0">View the <Link to="/sources">sources</Link> of other media in this app.</p>
                 </div>
             </footer>
         </BrowserRouter>
