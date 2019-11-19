@@ -13,10 +13,10 @@ const Home: React.SFC<HomeProps> = () => {
                 <h4 className="tarot-title text-center">A Tarot Reader</h4>
             </section>
             <section className="container col-9 p-3">
-                <h5 className="text-subtitle">In tarot there are many types of readings. The one you use depends on the type of reading you want or how detailed you'd like to get.</h5> 
-                <h5 className="text-subtitle">Our reading uses the Court Arcana Spread created by Nancy Garen, a tarot expert and psychic.</h5>
+                <h6 className="text-subtitle">In tarot there are many types of readings. The one you use depends on the type of reading you want or how detailed you'd like to get.</h6> 
+                <h6 className="text-subtitle">Our reading uses the Court Arcana Spread created by Nancy Garen, a tarot expert and psychic.</h6>
                 <div>
-                    <h5 className="text-subtitle mt-4">Before you do your reading, learn about the Court Arcana spread and instructions for using it.</h5>
+                    <h6 className="text-subtitle mt-4">Before you do your reading, learn about the Court Arcana spread and instructions for using it.</h6>
                     <div className="text-center">
                     <Link to="/spread" className="btn btn-secondary shadow text-center text-white">The Court Arcana Spread</Link>
                     </div>
