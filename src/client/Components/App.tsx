@@ -29,7 +29,7 @@ const App: React.SFC<AppProps> = () => {
                 <Route exact path="/reading" component={Reading} />
                 <Route exact path="/:id/result" component={Result} />
                 <Route exact path="/suits" component={Suits} />
-                <Route exact path="/sources" components={Sources} />
+                <Route exact path="/sources" component={Sources} />
             </Switch>
             <footer className="row footer navbar-static-footer">
                 <div className="col-xl-5 col-lg-5 col-md-5 bcol-sm-12 pl-5 g-dark py-3 my-auto justify-content-start">
