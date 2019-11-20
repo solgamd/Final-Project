@@ -29,14 +29,15 @@ const App: React.SFC<AppProps> = () => {
                 <Route exact path="/reading" component={Reading} />
                 <Route exact path="/:id/result" component={Result} />
                 <Route exact path="/suits" component={Suits} />
-                <Route exact path="/sources" components={Sources}/>
+                <Route exact path="/sources" components={Sources} />
             </Switch>
             <footer className="row footer navbar-static-footer">
                 <div className="col-xl-5 col-lg-5 col-md-5 bcol-sm-12 pl-5 g-dark py-3 my-auto justify-content-start">
                     <div className="d-flex flex-column">
-                        <Link to="/suits" className="my-2 text-primary">The Suits</Link>
-                        <Link to="/spread" className="my-2 text-primary">The Spread</Link>
-                        <Link to="/reading" className="my-2 text-primary">Do a Reading</Link>
+                    <Link to="/" className="my-1 text-primary">Home</Link>
+                        <Link to="/suits" className="my-1 text-primary">The Suits</Link>
+                        <Link to="/spread" className="my-1 text-primary">The Spread</Link>
+                        <Link to="/reading" className="my-1 text-primary">Do a Reading</Link>
                     </div>
                 </div>
                 <div className="col-xl-5 col-lg-5 col-md-5 py-3 pl-5 my-auto bg-dark">

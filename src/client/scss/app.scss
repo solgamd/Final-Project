@@ -56,7 +56,6 @@ body {
     font-family: $font-quick;
     background: {
         color: $purple;
-        // image: url('/images/moon3.jpg');
         size: cover;
         attachment: scroll;
         opacity: 0.1
@@ -72,6 +71,12 @@ body {
 .title-text {
     font-size: 90px;
     font-family: $font-ala;
+}
+
+.tarot-title {
+    font-family: $font-ala;
+    color: $grey;
+    font-size: 36px
 }
 
 .flex-circle {
@@ -135,10 +140,6 @@ body {
     font-weight: 600;
 }
 
-// .container-fluid {
-//     margin-right: 0px;
-//     margin-left: 0px;
-// }
 .row {
     margin-top: 1em;
     margin-bottom: 1em;
@@ -208,14 +209,9 @@ body {
         font-family: $font-quick;
         font-size: 17px;
         color: $dark;
+        font-weight: 600
     }
 }
-
-// .card-container {
-//     height: 200px;
-//     width: 200px;
-//     background-color: $grey; 
-// }
 
 .btn {
     margin: 5px 5px 5px 0px;

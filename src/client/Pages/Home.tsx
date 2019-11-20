@@ -18,7 +18,7 @@ const Home: React.SFC<HomeProps> = () => {
                         <h3>A Tarot Reader</h3>
                     </div>
                 </div>
-                <div className="col-md-6 col-lg-5 col-xl-5 moon-col bg-danger">
+                <div className="moon-col col-md-6 col-lg-5 col-xl-5 bg-secondary">
                     <div className="card flex-circle"></div>
                     <div className="moon-text">
                         <p className="text-danger">The cards are not "magical", "occult", or "evil"...</p>

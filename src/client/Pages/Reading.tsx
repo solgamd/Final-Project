@@ -8,8 +8,8 @@ import StartPanel from '../Components/StartPanel';
 import FinishPanel from '../Components/FinishPanel';
 import { RouteComponentProps } from 'react-router';
 
-export interface ReadingProps extends RouteComponentProps{
-   cards: ICard;
+export interface ReadingProps extends RouteComponentProps {
+    cards: ICard;
 }
 
 const Reading: React.SFC<ReadingProps> = () => {
@@ -80,7 +80,7 @@ const Reading: React.SFC<ReadingProps> = () => {
                             </div>
                         </div>
                         <div className="col pt-2">
-                        {pullCard == 0 ? <StartPanel /> : <FinishPanel cards={cards} />}
+                            {pullCard == 0 ? <StartPanel /> : <FinishPanel cards={cards} />}
                             <div className="text-center mt-3">
                                 <button className="btn btn-warning shadow" onClick={(e: React.MouseEvent<HTMLButtonElement>) => handleNewQuestion(e)}>Ask New Question</button>
                             </div>
