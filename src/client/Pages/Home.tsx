@@ -8,7 +8,7 @@ const Home: React.SFC<HomeProps> = () => {
 
     return (
         <>
-            <section className="row justify-content-center mt-3">
+            <section className="row justify-content-center mt-2">
                 <div className="gold-col col col-md-6 col-lg-6 col-xl-6 bg-secondary">
                     <div className="col mt-5 ml-4">
                         <h1 className="title-text" >The Court</h1>
@@ -27,12 +27,13 @@ const Home: React.SFC<HomeProps> = () => {
                     </div>
                 </div>
             </section>
-            <section className="container col-10 p-3 mt-3">
-                <h5 className="text-subtitle">In tarot there are many types of readings. The one you use depends on the type of reading you want or how detailed you'd like to get. Our reading uses the Court Arcana Spread created by Nancy Garen, a tarot expert.</h5> 
-                <h5 className="text-subtitle"></h5>
+            <section className="container col-10 p-3">
+                <h6 className="text-subtitle">In tarot there are many types of readings. The one you use depends on the type of reading you want or how detailed you'd like to get.</h6>
+                <h6 className="text-subtitle">Our reading uses the Court Arcana Spread created by Nancy Garen, a tarot expert.</h6> 
+                <h6 className="text-subtitle"></h6>
                 <div>
-                    <h5 className="text-subtitle mt-4">Before you do your reading, learn about the Court Arcana Spread and instructions for using it.</h5>
-                    <div className="text-center mt-4">
+                    <h6 className="text-subtitle mt-3">Learn about the Court Arcana Spread and instructions for using it.</h6>
+                    <div className="text-center">
                     <Link to="/spread" className="btn btn-secondary shadow text-center text-white">The Court Arcana Spread</Link>
                     </div>
              </div>
