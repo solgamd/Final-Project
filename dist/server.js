@@ -94,7 +94,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nexports.default = {\n    knex: {\n        client: 'mysql',\n        connection: {\n            user: 'root',\n            password: 'null',\n            host: 'localhost',\n            database: 'tarotreader'\n        }\n    },\n    auth: {\n        secret: 'renaultmegane'\n    }\n};\n\n\n//# sourceURL=webpack:///./src/server/config/index.ts?");
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nexports.default = {\n    knex: {\n        client: 'mysql',\n        connection: {\n            user: process.env.DB_USER,\n            password: process.env.DB_PASS,\n            host: process.env.DB_HOST,\n            database: process.env.DB_SCHEMA\n        }\n    },\n    auth: {\n        secret: 'renaultmegane'\n    }\n};\n\n\n//# sourceURL=webpack:///./src/server/config/index.ts?");
 
 /***/ }),
 
