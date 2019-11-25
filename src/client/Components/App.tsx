@@ -4,8 +4,8 @@ import Home from '../Pages/Home';
 import Reading from '../Pages/Reading';
 import Result from '../Pages/Result';
 import Spread from '../Pages/Spread';
-import Suits from './Suits';
-import Sources from './Sources';
+import Suits from '../Pages/Suits';
+import Sources from '../Pages/Sources';
 
 export interface AppProps { }
 export interface AppState { }

@@ -8,7 +8,7 @@ const Home: React.SFC<HomeProps> = () => {
 
     return (
         <>
-            <section className="row justify-content-center mt-2">
+            <section className="row justify-content-center mt-2 mb-0">
                 <div className="gold-col col col-md-6 col-lg-6 col-xl-6 bg-secondary">
                     <div className="col mt-5 ml-4">
                         <h1 className="title-text" >The Court</h1>
