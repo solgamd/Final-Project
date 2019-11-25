@@ -18,8 +18,8 @@ const App: React.SFC<AppProps> = () => {
                     <a href="/" className="logo bg-purple"><img src='/images/logosmall.png' className="logo" alt="logo" /></a>
                 </div>
                 <div className="d-flex flex-end flex-row">
-                    <Link to="/suits" className="m-2 link nav-link btn btn-outline-secondary" aria-pressed="true">The Suits</Link>
-                    <Link to="/spread" className="m-2 link nav-link btn btn-outline-secondary" aria-pressed="true">The Spread</Link>
+                    <Link to="/suits" className="m-2 link nav-link btn btn-outline-primary" aria-pressed="true">The Suits</Link>
+                    <Link to="/spread" className="m-2 link nav-link btn btn-outline-primary" aria-pressed="true">The Spread</Link>
                     <Link to="/reading" className="m-2 link nav-link btn btn-outline-danger" aria-pressed="true">Do a Reading</Link>
                 </div>
             </nav>

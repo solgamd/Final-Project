@@ -22,7 +22,7 @@ const Suits: React.SFC<SuitsProps> = () => {
                     <div className="col d-flex justify-content-end"><img src="/images/22.png" className="img-suits" /></div>
                     <div className="col d-flex justify-content-start"><img src="/images/24.png" className="img-suits" /></div>
                 </div>
-                <p className="text-center">The Suits—Wands, Cups, Swords, and Pentacles—are the esoteric formula or key to manifestation on the earth plane.</p>
+                <p className="text-center">The suits—Cups, Swords, and Pentacles, and Wands—are the esoteric formula or key to manifestation on the earth plane.</p>
                 <hr/>
                 <p>THE SUIT OF CUPS:</p>
                 <p>

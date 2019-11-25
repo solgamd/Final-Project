@@ -37,13 +37,16 @@ const Spread: React.SFC<SpreadProps> = () => {
                         <div>
                             <h5 className="mt-1">For example:</h5>
                             <ul className="list-group ml-5">
-                                <li>What type of person would be best for me?</li>
-                                <li>What type of person will I marry?</li>
                                 <li>What work am I best suited to do?</li>
                                 <li>What work will I do?</li>
                                 <li>When would be the best time to start this enterprise?</li>
                                 <li>What type of career will bring the most succcess?</li>
+                                <li>What type of person would be best for me?</li>
+                                <li>What type of person will I marry?</li>
                             </ul>
+                            <div className="d-flex justify-content-center">
+                            <Link to="/reading" className="btn btn-secondary shadow mt-3">Do a Reading</Link>
+                        </div>
                             <hr />
                             <h5>Procedure</h5>
                             <ol className="list-group ml-5">
