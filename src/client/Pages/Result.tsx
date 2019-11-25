@@ -24,6 +24,7 @@ const Result: React.SFC<ResultProps> = props => {
     useEffect(() => {
         (async () => {
             try {
+                window.scrollTo(0,0);
                 let [result]: any = await json(`/api/cards/${props.match.params.id}`);
                 setResult(result);
                 setSuitid(result.suitid)

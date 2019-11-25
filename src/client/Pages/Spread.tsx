@@ -1,9 +1,17 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
 export interface SpreadProps { }
 
 const Spread: React.SFC<SpreadProps> = () => {
+
+    useEffect(() => {
+        (async () => {
+            window.scrollTo(0, 0)
+        })()
+    }, []);
+    
     return (
         <>
             <main className="container spread-cont">
@@ -49,7 +57,7 @@ const Spread: React.SFC<SpreadProps> = () => {
                                 <p className="ml-3 mt-2 font-weight-bold"><i>I once asked what area would bring me the most satisfaction and prosperity. The card I drew was the King of Wands (Aries) which read:</i></p>
                                 <p className="ml-5 text-danger">TYPE OF VOCATION: Any area where leadership qualities are desired because you can work alone.</p>
                                 <p className="ml-3 font-weight-bold"><i>I then asked what area would I specialize in, and drew the Queen of Cups (Scorpio) which read:</i></p>
-                                <p className="ml-5 text-danger">TYPE OF PERSON: Spiritual, psychic, clairvoyant... TYPE OF VOCATION: Occult work, counselor...</p>
+                                <p className="ml-5 text-danger">TYPE OF PERSON: Spiritual, psychic, clairvoyant...  TYPE OF VOCATION: Occult work, counselor...</p>
                                 <p className="mt-3 text-center">When you're ready, try doing a reading.</p>
                             </div>
                         </div>

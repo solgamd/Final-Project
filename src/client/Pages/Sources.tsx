@@ -1,10 +1,18 @@
 import * as React from 'react';
+import { useEffect } from 'react';
 
 export interface SourcesProps {
     
 }
  
 const Sources: React.SFC<SourcesProps> = () => {
+
+    useEffect(() => {
+        (async () => {
+            window.scrollTo(0, 0)
+        })()
+    }, []);
+
     return (
         <div className="container">
             <div className="row">

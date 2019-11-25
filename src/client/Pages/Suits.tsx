@@ -1,8 +1,16 @@
 import * as React from 'react';
+import { useEffect } from 'react';
 
 export interface SuitsProps { }
 
 const Suits: React.SFC<SuitsProps> = () => {
+
+    useEffect(() => {
+        (async () => {
+            window.scrollTo(0, 0)
+        })()
+    }, []);
+    
     return (
         <section className="container col-10 text-secondary justify-content-center">
             <div className="p-3">

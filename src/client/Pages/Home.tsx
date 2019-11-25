@@ -1,10 +1,17 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
 export interface HomeProps { }
 export interface HomeState { }
 
 const Home: React.SFC<HomeProps> = () => {
+
+    useEffect(() => {
+        (async () => {
+            window.scrollTo(0, 0)
+        })()
+    }, []);
 
     return (
         <>

@@ -21,6 +21,7 @@ const Reading: React.SFC<ReadingProps> = () => {
     useEffect(() => {
         (async () => {
             try {
+                window.scrollTo(0,0);
                 let cards = await json('/api/cards');
                 setCards(cards);
             } catch (error) {
