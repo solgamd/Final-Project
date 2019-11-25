@@ -30,11 +30,6 @@ $info: $purple;
     }
 }
 
-// @include font('Aladin', '/public/fonts/Aladin-Regular.woff');
-// @include font('Quicksand', '/public/fonts/Quicksand-SemiBold.woff');
-// @include font('Quicksand', '/public/fonts/Quicksand-Light.woff');
-// @include font('Quicksand', '/public/fonts/Quicksand-Regular.woff');
-
 $font-quick: (
     'Quicksand', 'Quicksand-SemiBold', sans-serif
 );
@@ -189,7 +184,6 @@ body {
     margin: 5px;
     background-color: white;
     border: 1px solid $gold;
-
 }
 
 .card-2 {

@@ -19,7 +19,7 @@ const Spread: React.SFC<SpreadProps> = () => {
                     <h3 className="m-3 tarot-title">The Court Arcana Spread</h3>
                     <div className="col-10 bg-home">
                         <div className="text-grey mt-3">
-                            <p>This reading is specifically geared to:</p>
+                            <p>This reading is specifically geared towards:</p>
                             <ul>
                                 <li>Who</li>
                                 <li>What</li>
