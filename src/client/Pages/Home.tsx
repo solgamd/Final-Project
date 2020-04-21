@@ -18,8 +18,8 @@ const Home: React.SFC<HomeProps> = () => {
             <section className="row justify-content-center mt-2 mb-0">
                 <div className="gold-col col col-md-6 col-lg-6 col-xl-6 bg-secondary">
                     <div className="col mt-5 ml-4">
-                        <h1 className="title-text" >The Court</h1>
-                        <h1 className="title-text" >Arcana</h1>
+                        <h2 className="title-text" >The Court</h2>
+                        <h2 className="title-text" >Arcana</h2>
                     </div>
                     <div className="row mt-5 ml-5 justify-content-start">
                         <h3>A Tarot Reader</h3>
